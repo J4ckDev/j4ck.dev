@@ -1,15 +1,24 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": ["dist/**","node_modules/**",".astro/**",".vscode/**","public/**"],
+  "ignorePatterns": [
+    "dist/**",
+    "node_modules/**",
+    ".astro/**",
+    ".vscode/**",
+    "public/**"
+  ],
   "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "promise"],
   "categories": {
     "correctness": "error",
     "suspicious": "warn"
   },
   "rules": {
-    "import/no-unassigned-import": ["error", {
+    "import/no-unassigned-import": [
+      "error",
+      {
         "allow": ["**/*.css"]
-    }]
+      }
+    ]
   },
   "env": {
     "builtin": true

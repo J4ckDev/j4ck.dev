@@ -1,17 +1,22 @@
 ---
-import "@/assets/css/global.css";
+import { useTranslations } from "@/i18n/utils";
+import RootLayout from "@/layouts/RootLayout.astro";
+
+const lang = "en";
+
+const t = useTranslations(lang);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold text-violet-800">Astro</h1>
-  </body>
-</html>
+<RootLayout lang={lang} title={t("indexpage.title")}>
+  <main class="px-5">
+    <p class="font-normal">
+      I'm an Electronic and Telecommunications Engineer <strong
+        >with more than 5 years of experience as a Full Stack Web Developer</strong
+      >, working on different projects and continuously expanding my technical
+      knowledge while strengthening my programming and communication skills.
+      Throughout my career, I've learned to work effectively in dynamic and
+      challenging environments, collaborating with teams to make sound technical
+      decisions and deliver high-quality, valuable solutions for customers.
+    </p>
+  </main>
+</RootLayout>

@@ -1,0 +1,23 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import RootLayout from "@/layouts/RootLayout.astro";
+
+const lang = "es";
+
+const t = useTranslations(lang);
+---
+
+<RootLayout lang={lang} title={t("indexpage.title")}>
+  <main class="px-5">
+    <p class="font-normal">
+      Soy un Ingeniero en Electrónica y Telecomunicaciones <strong
+        >con más de 5 años de experiencia como Desarrollador Web Full Stack</strong
+      >, trabajando en diferentes proyectos y continuamente expandiendo mi
+      conocimiento técnico mientras fortalezco mis habilidades de programación y
+      comunicación. A lo largo de mi carrera, he aprendido a trabajar
+      eficazmente en entornos dinámicos y desafiantes, colaborando con equipos
+      para tomar decisiones técnicas sólidas y entregar soluciones de alta
+      calidad y valor para los clientes.
+    </p>
+  </main>
+</RootLayout>
